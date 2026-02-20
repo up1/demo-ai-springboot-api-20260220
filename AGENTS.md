@@ -89,6 +89,33 @@ Project structure based-on feature/domain organization:
 - Use parameterized queries | Always use Spring Data JPA or `NamedParameterJdbcTemplate` to prevent SQL injection.
 - Validate request bodies and parameters using JSR-380 (`@NotNull`, `@Size`, etc.) annotations and `BindingResult`
 
+## Testing with Spring Boot
+- Use JUnit 5 for unit and integration testing.
+- Use Mockito for mocking dependencies in unit tests.
+- Use `@SpringBootTest` for integration tests that require the Spring context.
+- Use `@WebMvcTest` for testing controllers in isolation.
+- Use `@DataJpaTest` for testing JPA repositories with an in-memory database.
+- Write tests for both successful scenarios and edge cases, including validation errors and exception handling.
+- Use descriptive test method names that clearly indicate the scenario being tested.
+- Ensure tests are independent and can be run in any order without side effects.    
+
+Project structure for testing:
+```com.example.project
+├── user
+│   ├── UserControllerTest.java
+│   ├── UserServiceTest.java
+│   └── UserRepositoryTest.java
+├── order
+│   ├── OrderControllerTest.java
+│   ├── OrderServiceTest.java
+│   └── OrderRepositoryTest.java
+├── config
+│   └── SecurityConfigTest.java
+├── exception
+│   └── GlobalExceptionHandlerTest.java
+└── ApplicationTest.java
+```
+
 ## Build and Verification
 
 - After adding or modifying code, verify the project continues to build successfully.
