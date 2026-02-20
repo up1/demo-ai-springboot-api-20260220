@@ -143,6 +143,9 @@ Table orders {
 Table products {
   id bigint [pk, increment, note: 'generated always as identity']
   unique_id text [unique, not null]
+  name text [not null]
+  description text
+  stock_quantity int [not null]
 }
 
 Table order_line_items {
