@@ -7,6 +7,14 @@
 - Handle edge cases and write clear exception handling.
 - For libraries or external dependencies, mention their usage and purpose in comments.
 
+## Technical Requirements
+- Use Java 21 or later.
+- Use Spring Boot 4 for application development.
+- Use Spring Data JPA for database interactions.
+- Use PostgreSQL as the database.
+- Use Docker for containerization.
+- Use VS Code with GitHub Copilot Chat for development assistance.
+
 ## Spring Boot Instructions
 
 ### Dependency Injection
