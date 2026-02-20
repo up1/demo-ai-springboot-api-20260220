@@ -12,9 +12,9 @@
 ### Request Specification
 * POST /api/v1/orders
 * Headers:
-  * Content-Type: application/json.
-  * Accept: application/json.
-  * Authorization: Bearer <token> (if authentication is required).
+  * Content-Type: application/json
+  * Accept: application/json
+  * Authorization: Bearer <token> (authentication is required)
 * Request body
 ```
 {
